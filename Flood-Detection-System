@@ -1,0 +1,22 @@
+
+public class FloodDetectingSystem {
+
+    private boolean isFloodDetected;
+
+    public void detectFlood(int waterLevel) {
+        if (waterLevel > 100) {
+            isFloodDetected = true;
+            System.out.println("Flood detected! Water level is " + waterLevel + " cm");
+        } else {
+            isFloodDetected = false;
+            System.out.println("No flood detected. Water level is " + waterLevel + " cm");
+        }
+    }
+
+    public static void main(String[] args) {
+        FloodDetectingSystem floodDetector = new FloodDetectingSystem();
+        floodDetector.detectFlood(80);
+        floodDetector.detectFlood(120);
+    }
+  }
+}
